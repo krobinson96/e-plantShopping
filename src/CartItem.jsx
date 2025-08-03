@@ -44,8 +44,9 @@ const CartItem = ({ onContinueShopping }) => {
         return parseFloat(item.cost.substring(1))*item.quantity;
     };
 
-    const handleCheckoutShopping = (e) => {
-        alert('Functionality to be added for future reference');
+    const handleCheckoutShopping = () => {
+        console.log("Checked out")
+        alert(`Functionality to be added at a later date: `);
     };
 
     return (
@@ -73,7 +74,7 @@ const CartItem = ({ onContinueShopping }) => {
         <div className="continue_shopping_btn">
         <button className="get-started-button" onClick={(e) => handleContinueShopping(e)}>Continue Shopping</button>
         <br />
-        <button className="get-started-button1">Checkout</button>
+        <button className="get-started-button1" onClick={()=>handleCheckoutShopping()}>Checkout</button>
         </div>
     </div>
     );
